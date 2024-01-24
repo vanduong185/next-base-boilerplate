@@ -35,6 +35,9 @@ dependencies:
   next-auth:
     specifier: ^4.24.5
     version: 4.24.5(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
+  next-themes:
+    specifier: ^0.2.1
+    version: 0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -139,6 +142,9 @@ devDependencies:
   storybook:
     specifier: ^7.6.10
     version: 7.6.10
+  storybook-dark-mode:
+    specifier: ^3.0.3
+    version: 3.0.3(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
   style-loader:
     specifier: ^3.3.4
     version: 3.3.4(webpack@5.89.0)
@@ -2856,6 +2862,17 @@ packages:
     resolution: {integrity: sha512-+bA6juC/lH4vEhk+w0rXakaG8JgLG4MOYrIudk5vJKQaC6X58LIM9N4kzIS2KSExRhkExXBPrWsnMfCo7uxmKg==}
     dependencies:
       memoizerific: 1.11.3
+    dev: true
+
+  /@storybook/addons@7.6.10(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-lv/oT4ZGMKfXh6bB7LbuRP85bwRprBPYuMMl+e1Ikvu5WTfqVoJRYjc7mvXaIHGCI6DZ/nFcbRjra6q8ZhoDgw==}
+    dependencies:
+      '@storybook/manager-api': 7.6.10(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/preview-api': 7.6.10
+      '@storybook/types': 7.6.10
+    transitivePeerDependencies:
+      - react
+      - react-dom
     dev: true
 
   /@storybook/blocks@7.6.10(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0):
@@ -8351,6 +8368,18 @@ packages:
       uuid: 8.3.2
     dev: false
 
+  /next-themes@0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 14.1.0(@babel/core@7.23.7)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /next@14.1.0(@babel/core@7.23.7)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-wlzrsbfeSU48YQBjZhDzOwhWhGsy+uQycR8bHAOt1LY1bn3zZEcDyHQOEoN3aWzQ8LHCAJ1nqrWCc9XF2+O45Q==}
     engines: {node: '>=18.17.0'}
@@ -10174,6 +10203,32 @@ packages:
 
   /store2@2.14.2:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
+    dev: true
+
+  /storybook-dark-mode@3.0.3(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ZLBLVpkuKTdtUv3DTuOjeP/bE7DHhOxVpDROKc0NtEYq9JHLUu6z05LLZinE3v6QPXQZ9TMQPm3Xe/0BcLEZlw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@storybook/addons': 7.6.10(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.6.10(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/core-events': 7.6.10
+      '@storybook/global': 5.0.0
+      '@storybook/manager-api': 7.6.10(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/theming': 7.6.10(react-dom@18.2.0)(react@18.2.0)
+      fast-deep-equal: 3.1.3
+      memoizerific: 1.11.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
     dev: true
 
   /storybook@7.6.10:
