@@ -1,8 +1,11 @@
+import { isEqual } from "lodash";
 import {
   getServerSession,
   type DefaultSession,
   type NextAuthOptions,
+  User,
 } from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -50,6 +53,39 @@ export const authOptions: NextAuthOptions = {
      *
      * @see https://next-auth.js.org/providers/github
      */
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        username: { label: "Username", type: "text", placeholder: "jsmith" },
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+        // You need to provide your own logic here that takes the credentials
+        // submitted and returns either a object representing a user or value
+        // that is false/null if the credentials are invalid.
+        // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
+        // You can also use the `req` object to obtain additional parameters
+        // (i.e., the request IP address)
+        const user = {
+          username: "admin",
+          password: "Admin@123",
+        };
+
+        // If no error and we have user data, return it
+        if (
+          credentials?.username === user.username &&
+          credentials?.password === user.password
+        ) {
+          return {
+            id: "1",
+            name: "Admin",
+            email: "admin@example.com",
+          };
+        }
+        // Return null if user data could not be retrieved
+        return null;
+      },
+    }),
   ],
 };
 

@@ -1,7 +1,9 @@
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
+import { getServerSession } from "next-auth";
 import { cn } from "~/lib/utils";
+import SessionProvider from "~/components/session-provider";
 import ThemeProvider from "~/components/theme-provider";
 
 const inter = Inter({
@@ -15,11 +17,14 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getServerSession();
+  console.log(session);
+
   return (
     <html lang="en">
       <body
@@ -28,14 +33,16 @@ export default function RootLayout({
           inter.variable,
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <SessionProvider session={session}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </SessionProvider>
       </body>
     </html>
   );
