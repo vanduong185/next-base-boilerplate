@@ -1,0 +1,13 @@
+{
+  "loginPage": {
+    "login": "ログイン",
+    "email": "Eメール",
+    "password": "パスワード",
+    "submit": "提出する",
+    "signUp": "サインアップ"
+  },
+  "signUpPage": {
+    "signUp": "サインアップ",
+    "goToLogin": "ログインに行く"
+  }
+}

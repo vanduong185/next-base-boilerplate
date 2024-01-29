@@ -6,6 +6,7 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
+- [Next-Intl](https://next-intl-docs.vercel.app/)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Shadcn/ui](https://ui.shadcn.com/)
 - [Radix UI](https://www.radix-ui.com/)

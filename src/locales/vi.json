@@ -1,0 +1,13 @@
+{
+  "loginPage": {
+    "login": "Đăng Nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "submit": "Đăng nhập",
+    "signUp": "Đăng ký"
+  },
+  "signUpPage": {
+    "signUp": "Đăng Ký",
+    "goToLogin": "Tới Đăng nhập"
+  }
+}

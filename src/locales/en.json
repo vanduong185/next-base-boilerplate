@@ -1,0 +1,13 @@
+{
+  "loginPage": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Submit",
+    "signUp": "Sign Up"
+  },
+  "signUpPage": {
+    "signUp": "Sign Up",
+    "goToLogin": "Go to Login"
+  }
+}
